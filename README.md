@@ -66,9 +66,3 @@ npm run dev
 - [ ] CGPA Calculator
 - [ ] User Authentication
 - [ ] Data persistence with MongoDB
-
----
-
-## 👤 Author
-
-Built with ❤️ as a portfolio project.
