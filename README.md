@@ -1,4 +1,3 @@
-# Testing Pushing on the Github
 # 🎓 Attendance & CGPA Calculator
 
 A modern, full-stack web application built with **React + Vite**, **Tailwind CSS**, **Node.js**, **Express**, and **MongoDB**. Designed for students to effortlessly track attendance and calculate CGPA.

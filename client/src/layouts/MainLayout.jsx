@@ -1,32 +1,25 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 function MainLayout() {
   return (
-    <div className="flex flex-col min-h-screen relative overflow-hidden">
-      {/* Background radial effects */}
-      <div className="absolute top-0 left-0 right-0 h-[500px] bg-gradient-to-b from-brand-600/10 to-transparent pointer-events-none z-0" />
+    <div className="flex flex-col min-h-screen relative overflow-hidden bg-slate-950 text-slate-100">
+      {/* Background radial glow effects */}
+      <div className="absolute top-0 left-1/4 w-[600px] h-[400px] bg-brand-600/10 blur-[120px] rounded-full pointer-events-none z-0" />
+      <div className="absolute top-1/3 right-10 w-[500px] h-[350px] bg-brand-550/10 blur-[130px] rounded-full pointer-events-none z-0" />
       
-      {/* Responsive Navigation header */}
+      {/* Responsive Navigation Header */}
       <Navbar />
 
-      {/* Main body content container */}
-      <main className="flex-grow flex flex-col justify-start relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+      {/* Main Outlet Body Content */}
+      <main className="flex-grow relative z-10 w-full">
         <Outlet />
       </main>
 
-      {/* Footer component */}
-      <footer className="relative z-10 border-t border-slate-800/80 bg-slate-950/60 backdrop-blur-md py-6 text-center text-sm text-slate-500">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p>© {new Date().getFullYear()} AcadSync. All rights reserved.</p>
-          <div className="flex gap-4">
-            <span className="hover:text-slate-300 transition-colors cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-slate-300 transition-colors cursor-pointer">Terms of Service</span>
-            <span className="hover:text-slate-300 transition-colors cursor-pointer">Contact Support</span>
-          </div>
-        </div>
-      </footer>
+      {/* Reusable SaaS Footer Component */}
+      <Footer />
     </div>
   );
 }
